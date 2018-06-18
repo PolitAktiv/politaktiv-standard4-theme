@@ -29,6 +29,16 @@
 <div id="contentHeader" class="portlet-layout row">
 	<div id="contentHeaderInner" class="col-md-12 portlet-column portlet-column-only yui3-dd-drop">
 		<div id="layout-column_columnHeader" class="portlet-dropzone portlet-column-content portlet-column-content-only">
+ 			
+ 			<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+ 			<#assign pageID = themeDisplay.getPlid() />
+ 
+			<@liferay_portlet["runtime"]
+			defaultPreferences="${freeMarkerPortletPreferences}"
+			portletProviderAction=portletProviderAction.VIEW
+			instanceId="${pageID}"
+			portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+			${freeMarkerPortletPreferences.reset()}
 			
 		</div>
 	</div>
@@ -89,7 +99,7 @@
 $(document).ready(function() {
 	if ($('#ControlMenu').length > 0) {
     	$('#contentHeader').addClass('headerLoggedIn');
-   	} 
+   	}
 });
 
 $(function(){

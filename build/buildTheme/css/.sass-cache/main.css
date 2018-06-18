@@ -692,6 +692,13 @@
 * All rights reserved.
 * MIT license
 */
+.portlet-only-border {
+  background: #FFF;
+  border-color: #e3e6e8;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  word-break: break-word; }
+
 .loading-animation, .loadingmask-message .loadingmask-message-content {
   animation: loading-animation 1.7s infinite ease;
   border-radius: 50%;
@@ -3922,12 +3929,14 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
   font-weight: 400 !important; }
 
 /* global margin */
-/*
-.portlet-column {
-	padding-left: 10%;
-	padding-right: 10%;
-}
+#content {
+  padding-left: 10%;
+  padding-right: 10%; }
 
+.portlet-column {
+  padding-bottom: 10px; }
+
+/*
 #column-2 {
 	padding-right: 10px !important;
 }
@@ -4005,7 +4014,7 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
 
 /* liferay 7 classic */
 body {
-  background-color: #F5F7F8; }
+  background-color: #F0F0F0; }
 
 .container-fluid-1280 .row {
   margin-left: 15px;
