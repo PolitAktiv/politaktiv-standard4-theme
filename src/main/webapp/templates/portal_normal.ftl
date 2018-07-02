@@ -13,15 +13,13 @@
 	
 	<#-- Include custom CSS and JS if it exists -->
 	
-	<#--
-	<#if fileService.getFileEntry(getterUtil.getLong(systemGroupId),  0, "${globalCSSFileName}")>
+	<#if fileService.getFileEntry(themeDisplay.getCompanyGroupId(),  0, "${globalCSSFileName}")??>
 		<link href="${cssIncludePath}" rel="stylesheet">
 	</#if> 
 
-	<#if fileService.getFileEntry(getterUtil.getLong(systemGroupId),  0, "${globalJSFileName}")>
+	<#if fileService.getFileEntry(themeDisplay.getCompanyGroupId(),  0, "${globalJSFileName}")??>
 		<script type="text/javascript" src="${jsIncludePath}"></script>
 	</#if>
-	-->
 	
 	<#if fileService.getFileEntry(themeDisplay.getScopeGroupId(),  0, "${localCSSFileName}")??>
 		<link href="${cssDKIncludePath}" rel="stylesheet">
