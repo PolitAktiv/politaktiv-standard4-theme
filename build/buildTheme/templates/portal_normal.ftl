@@ -28,7 +28,7 @@
 	</#if>
 	
 	<#if fileService.getFileEntry(themeDisplay.getScopeGroupId(),  0, "${localJSFileName}")??>
-		<script type="text/javascript" src="${jsDKIncludePath}">alert("Hi");</script>
+		<script type="text/javascript" src="${jsDKIncludePath}"></script>
 	</#if>
 	
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet"> 
@@ -118,8 +118,6 @@
 	<footer class="container-fluid-1280" id="footer" role="contentinfo">
 		<div class="row">
 			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
-			${jsDKIncludePath}
-			${cssDKIncludePath}
 		</div>
 	</footer>
 </div>
